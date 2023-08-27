@@ -1,0 +1,83 @@
+html {
+  background-color: rgb(0, 61, 167);
+  color: aliceblue;
+  text-align: center;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: white;
+  border-radius: 0 0 10rem 10rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 92.5%;
+  background-color: black;
+  height: 3rem;
+  width: 100%;
+}
+.content-points {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 45%;
+  height: 30vh;
+}
+.content-points p {
+  display: inline-block;
+  color: yellow;
+  margin: 2rem;
+  font-size: 2rem;
+}
+.box-point {
+  display: inline-block;
+  width: 2rem;
+  font-size: 2rem;
+  color: black;
+  background-color: aliceblue;
+  border: thin solid black;
+  border-radius: 10%;
+}
+
+.choose {
+  display: inline-flex;
+  width: 75%;
+  height: 25vh;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.choose > button {
+  cursor: pointer;
+  width: 15%;
+  font-size: 3rem;
+  border-style: none;
+  border-radius: 10%;
+  box-shadow: 0.5rem 0.5rem 1.5rem 0.5rem;
+}
+
+.choose > button:hover {
+  background-color: rgb(255, 140, 0);
+}
+.choose > button:active {
+  background-color: rgb(212, 113, 0);
+}
+
+.text-result > p {
+  font-size: 1.5rem;
+}
