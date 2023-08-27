@@ -1,6 +1,6 @@
 html {
-  background-color: rgb(0, 61, 167);
-  color: aliceblue;
+  background-color: rgb(159, 0, 167);
+  color: beige;
   text-align: center;
 }
 
@@ -8,6 +8,7 @@ h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   padding: 1rem 0;
+  color: brown;
 }
 
 p {
@@ -15,10 +16,11 @@ p {
 }
 
 header {
-  background-color: white;
+  background-color: beige;
   border-radius: 0 0 10rem 10rem;
   color: black;
   margin-bottom: 1rem;
+  border-bottom: solid 0.25rem brown;
 }
 
 footer {
@@ -28,30 +30,38 @@ footer {
   position: fixed;
   top: 92.5%;
   background-color: black;
-  height: 3rem;
+  height: 2.5rem;
   width: 100%;
+  border-top: medium solid rgba(245, 245, 220, 0.33);
 }
 .content-points {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  width: 45%;
+  width: 50%;
   height: 30vh;
+}
+.content-points > div {
+  background-color: rgba(165, 42, 42, 0.7);
+  border-radius: 10% / 30%;
+  box-shadow: 0 0.5rem 2rem 0 rgba(126, 33, 33, 0.692);
 }
 .content-points p {
   display: inline-block;
-  color: yellow;
-  margin: 2rem;
+  color: beige;
   font-size: 2rem;
+  margin: 1rem;
 }
 .box-point {
   display: inline-block;
   width: 2rem;
+  margin: 1rem;
   font-size: 2rem;
   color: black;
-  background-color: aliceblue;
+  background-color: beige;
   border: thin solid black;
-  border-radius: 10%;
+  border-radius: 15%;
+  transition: 0.5s;
 }
 
 .choose {
@@ -68,16 +78,26 @@ footer {
   font-size: 3rem;
   border-style: none;
   border-radius: 10%;
-  box-shadow: 0.5rem 0.5rem 1.5rem 0.5rem;
+  box-shadow: 0.5rem 0.5rem 1.5rem 0;
+  transition: 0.5s;
 }
 
 .choose > button:hover {
   background-color: rgb(255, 140, 0);
+  box-shadow: 0.5rem 0.5rem 1.5rem 0 rgb(212, 113, 0, 0.75);
 }
 .choose > button:active {
   background-color: rgb(212, 113, 0);
+  transform: scale(0.95);
 }
 
 .text-result > p {
   font-size: 1.5rem;
+}
+
+.win {
+  background-color: rgb(0, 180, 0);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 0.5rem 0.05rem rgb(21, 181, 37);
 }

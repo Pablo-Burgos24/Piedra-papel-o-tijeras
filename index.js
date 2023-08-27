@@ -52,15 +52,21 @@ function playRound(playerSelection) {
     computerPoints = 0;
     pointsPlayer.innerText = playerPoints;
     pointsComputer.innerText = computerPoints;
+    pointsPlayer.classList.remove("win");
+    pointsComputer.classList.remove("win");
   }
 }
 
 function ganaJugador() {
   playerPoints++;
   pointsPlayer.innerText = playerPoints;
+  pointsPlayer.classList.add("win");
+  pointsComputer.classList.remove("win");
 }
 
 function ganaComputadora() {
   computerPoints++;
   pointsComputer.innerText = computerPoints;
+  pointsComputer.classList.add("win");
+  pointsPlayer.classList.remove("win");
 }
