@@ -2,49 +2,47 @@ html {
   background-color: rgb(159, 0, 167);
   color: beige;
   text-align: center;
+  height: 100vh;
 }
-
 h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 0;
-  padding: 1rem 0;
-  color: brown;
+  margin: 0.5rem;
 }
-
 p {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0.5rem;
 }
 
-header {
+.body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4rem 22.5% 27.5% 1fr 2.5rem;
+  grid-template-areas: "header" "content-points" "choose" "text-result" "footer";
+  justify-content: center;
+  align-content: center;
+  gap: 2rem 0;
+  min-height: 100%;
+}
+
+.header {
+  grid-area: header;
   background-color: beige;
   border-radius: 0 0 10rem 10rem;
-  color: black;
-  margin-bottom: 1rem;
+  color: brown;
   border-bottom: solid 0.25rem brown;
 }
 
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 92.5%;
-  background-color: black;
-  height: 2.5rem;
-  width: 100%;
-  border-top: medium solid rgba(245, 245, 220, 0.33);
-}
 .content-points {
+  grid-area: content-points;
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  width: 50%;
-  height: 30vh;
+  justify-content: center;
 }
 .content-points > div {
   background-color: rgba(165, 42, 42, 0.7);
   border-radius: 10% / 30%;
   box-shadow: 0 0.5rem 2rem 0 rgba(126, 33, 33, 0.692);
+  margin: 0 3rem;
 }
 .content-points p {
   display: inline-block;
@@ -65,34 +63,40 @@ footer {
 }
 
 .choose {
+  grid-area: choose;
   display: inline-flex;
-  width: 75%;
-  height: 25vh;
   justify-content: space-evenly;
-  margin-bottom: 2rem;
 }
-
 .choose > button {
   cursor: pointer;
   width: 15%;
+  height: 27.5vh;
   font-size: 3rem;
   border-style: none;
   border-radius: 10%;
-  box-shadow: 0.5rem 0.5rem 1.5rem 0;
+  box-shadow: 0rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.5);
   transition: 0.5s;
 }
-
 .choose > button:hover {
   background-color: rgb(255, 140, 0);
-  box-shadow: 0.5rem 0.5rem 1.5rem 0 rgb(212, 113, 0, 0.75);
+  box-shadow: 0rem 0.5rem 1rem 0.25rem rgb(212, 113, 0, 0.75);
 }
 .choose > button:active {
-  background-color: rgb(212, 113, 0);
+  background-color: rgb(240, 140, 0);
+  box-shadow: 0rem 0.5rem 1rem 0;
   transform: scale(0.95);
 }
 
-.text-result > p {
+.text-result {
+  grid-area: text-result;
+  align-self: center;
   font-size: 1.5rem;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: black;
+  border-top: medium solid rgba(245, 245, 220, 0.33);
 }
 
 .win {
